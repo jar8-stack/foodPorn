@@ -1,12 +1,15 @@
 const mysql= require('mysql');
 
-connection= mysql.createConnection({
+// Initialize pool
+var pool =  mysql.createPool({
+  connectionLimit : 10,
   host: 'localhost',
   port: '4502',
   user: 'root',
   password: '123456',
-  database: 'foodPorn'
-});
+  database: 'foodPorn',
+  debug    :  false
+});    
 
 
-module.exports= connection;
+module.exports = pool;
