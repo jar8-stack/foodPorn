@@ -4,7 +4,7 @@ let categoriaModel = {};
 
 // Obtener las categorias
 categoriaModel.getCategory = (callback) =>{
-    if(connection){
+    if(connection){        
         connection.query('SELECT * FROM CATEGORIA',
         (err, rows)=>{ 
             if(err){
