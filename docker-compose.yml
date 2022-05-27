@@ -1,14 +1,10 @@
 version: '2'
 services:
   mysqldb:
-    image: mysql
-    restart: unless-stopped
-    env_file: ./.env
-    environment:
-      - MYSQL_USER=root
+    image: mysql       
+    environment:      
       - MYSQL_ROOT_PASSWORD=123456
-      - MYSQL_DATABASE=foodPorn
-      - TZ=UTC
+      - MYSQL_DATABASE=foodPorn      
     ports:
       - 3306:3306
     volumes:
